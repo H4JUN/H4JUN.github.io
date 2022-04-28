@@ -1,0 +1,93 @@
+/* Imports:  */
+
+@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+
+
+
+/* General */
+
+
+body {
+  background-color: antiquewhite;
+  font-family: 'Trebuchet MS', sans-serif;
+
+}
+
+.main {
+  height: 57em;
+  width: auto;
+  background-color: lightgoldenrodyellow;
+  text-align: center;
+}
+
+#main-title {
+  left: 0;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  position: absolute;
+  right: 0;
+  top: 85%;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.flex-container > div {
+  width: 100%;
+}
+
+div.contact {
+  background-color: lightslategray;
+  text-align:left;
+  margin-top:1em;
+}
+
+div.Lang {
+  background-color: lightsalmon;
+  text-align: left;
+  margin-top: 0.3rem;
+}
+
+
+/* Typography */
+#txt-rotate {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2rem;
+  color: indianred;
+}
+
+
+
+/* Introduction */
+
+.intro {
+  background-color: lightcoral;
+}
+.paragraph {
+  text-align: left;
+  margin-bottom: 5em;
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+div.polaroid {
+  margin-top: 25px;
+  width: 40%;
+  background-color: lightcyan;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
