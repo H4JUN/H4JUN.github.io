@@ -3,4 +3,4 @@
 /pkg
 /markdown_blogs
 Cargo.lock
-www/package-lock.json
+.appveyor.yml
