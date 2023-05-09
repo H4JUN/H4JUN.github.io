@@ -1,2 +1,6 @@
+target = "index.html"
+dist = "dist"
+public_url = "/H4JUN.github.io/"
+
 [watch]
 ignore = ["./src/mdblogs.rs"]
