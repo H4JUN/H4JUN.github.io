@@ -1,6 +1,5 @@
 use yew::prelude::*;
 use crate::mdblogs::BLOGS;
-// use crate::highlight;
 
 pub enum Msg {
 }

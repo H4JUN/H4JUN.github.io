@@ -1,8 +1,2 @@
 /target
-/tests
-/pkg
-/markdown_blogs
-Cargo.lock
-www/node_modules
-www/dist
-www/package-lock.json
+/dist

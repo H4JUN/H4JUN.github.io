@@ -80,11 +80,11 @@ impl Donutcanvas {
             for x in 0..SCREEN_WIDTH as u32{
                 let idx = self.donut.get_index(x, y);
                 if new_vec[idx] > 0 {
-                    ctx.set_fill_style(&format!("rgba(133,58,25,{})", 1.0 - ( new_vec[idx] as f64 / 255.0)).into());
-                    // ctx.set_fill_style(&format!("rgba(255,255,255,{})", new_vec[idx] as f64 / 255.0).into());
+                    // ctx.set_fill_style(&format!("rgba(133,58,25,{})", 1.0 - ( new_vec[idx] as f64 / 255.0)).into());
+                    ctx.set_fill_style(&format!("rgba(255,255,255,{})", new_vec[idx] as f64 / 255.0).into());
                 }
                 else {
-                    ctx.set_fill_style(&"rgba(0,0,0,0.1)".into());
+                    ctx.set_fill_style(&"rgba(0,0,0,0)".into());
                 }
                 ctx.fill_rect(
                     (x * PARTICLE) as f64,

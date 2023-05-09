@@ -2,6 +2,12 @@ html {
   background-color : ivory;
 }
 
+/* Home */
+.home {
+  background-color : black;
+  color : ivory;
+}
+
 /* Navbar */
 .navbar {
   display: flex;

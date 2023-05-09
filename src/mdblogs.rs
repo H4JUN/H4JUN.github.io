@@ -8,7 +8,7 @@ pub const BLOGS: &'static [MarkdownBlog] = &[
     
     MarkdownBlog {
         title: "R Programming Language Data Analysis Tutorial",
-        date_created: "2023-05-07",
+        date_created: "2023-05-08",
         post: r#####"<p>This is my tutorial for R data analysis. It was one of my first analysis project done with R.</p>
 <p>The original post can be found on my <a href="https://www.kaggle.com/code/ihazun01/analyzing-disasters-dataset">Kaggle</a>.
 Please refer to the dataset on Kaggle.</p>
