@@ -27,7 +27,7 @@ impl Component for Navbar {
             items : NAVITEMS.iter().map(|&item| item.into()).collect(),
         }
     }
-
+    #[allow(clippy::redundant_clone)]
     fn view(&self, ctx: &Context<Self>) -> Html {
         let navigator = ctx.link().navigator().unwrap();
     
