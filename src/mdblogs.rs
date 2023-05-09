@@ -4,7 +4,7 @@ pub struct MarkdownBlog<'b> {
     pub post: &'b str,
 }
 
-pub const BLOGS: &'static [MarkdownBlog] = &[
+pub const BLOGS: &[MarkdownBlog] = &[
     
     MarkdownBlog {
         title: "R Programming Language Data Analysis Tutorial",

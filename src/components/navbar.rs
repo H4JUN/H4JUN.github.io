@@ -48,7 +48,7 @@ impl Component for Navbar {
 
         // Converting static navitems to html tags
         let elements = self.items.iter().enumerate().map(|(idx, item)| {
-            let name = format!("{}", item.clone().split(" ").collect::<Vec<_>>()[1]).to_lowercase(); // 🏡 Home -> Home
+            let name = item.clone().split(' ').collect::<Vec<_>>()[1].to_string().to_lowercase(); // 🏡 Home -> Home
             let mut class = vec!["nav_item".to_string()];
             if name == *ctx.props().name {
                 class.push("active".to_string());
