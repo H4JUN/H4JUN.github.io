@@ -1,6 +1,2 @@
-[build]
-target = "index.html"
-dist = "dist"
-
 [watch]
 ignore = ["./src/mdblogs.rs"]
