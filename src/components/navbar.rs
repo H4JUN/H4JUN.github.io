@@ -37,7 +37,7 @@ impl Component for Navbar {
         };
         let on_click_blog = {
             let navigator = navigator.clone();
-            Callback::from(move |_| navigator.push(&Route::Blog))
+            Callback::from(move |_| navigator.push(&Route::BlogTOC))
         };
         let on_click_about = {
             let navigator = navigator.clone();

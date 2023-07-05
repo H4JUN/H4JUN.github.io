@@ -4,17 +4,23 @@ html {
 
 /* Home */
 .home {
+  padding-top: 60px; /*NAVBAR OVERLAP*/
   background-color : black;
   color : ivory;
 }
 
 /* Navbar */
 .navbar {
+  background-color: white;
   display: flex;
-  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  justify-content: space-evenly;
   align-items: center;
   padding: 10px 30px;
   box-shadow: 0 1px 8px #ddd;
+  z-index: 1
 }
 
 .navbar > #logo {
@@ -63,21 +69,78 @@ canvas {
 
 /* Blog */
 .blog {
-  margin-left: 10%;
+  padding-top: 80px; /*NAVBAR OVERLAP*/
+  margin-left: 2%;
 }
-.blog img {
-  padding: 0;
-  margin: auto;
-  width: 40%;
+
+.blog h2 {
+  margin-left: 2%;
+}
+
+.blog h3 {
+  margin-left: 4%;
+}
+
+.blog h4 {
+  margin-left: 6%;
+}
+
+.blog p {
+  margin-left: 8%;
 }
 
 .blog pre{
-  margin-left: 5%;
+  font-family: 'Courier New', monospace;
+  margin-left: 10%;
+  margin-right: 10%;
   background:#F8F8FF;
   border: black dotted 1px; 
   padding:6px;
+  overflow-x:auto;
 }
 
 .blog pre:hover {
   border: black solid 1px;
+}
+
+.blog img {
+  padding: 0;
+  margin: auto;
+  width: 50%;
+}
+
+.blog .item {
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.blog .item:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.blog .item .title {
+  color: black;
+  font-weight: bold;
+}
+
+.blog .item .date {
+  color: grey;
+  font-style: italic;
+}
+
+.blog a {
+  text-decoration: none;
+}
+
+
+/* About */
+.about {
+  padding-top: 60px; /* NAVBAR OVERLAP */
 }

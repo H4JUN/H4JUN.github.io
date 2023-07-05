@@ -4,6 +4,7 @@ use crate::components::{
     navbar::Navbar,
     home::Home,
     blog::Blog,
+    about::About,
 };
 
 #[derive(Clone, Routable, PartialEq)]
@@ -11,7 +12,9 @@ pub enum Route {
     #[at("/")]
     Home,
     #[at("/blog")]
-    Blog,
+    BlogTOC,
+    #[at("/blog/:title")]
+    Blog { title: String },
     #[at("/about")]
     About,
     #[not_found]
@@ -27,7 +30,13 @@ fn switch(routes : Route) -> Html {
             <Home/>
             </>
         },
-        Route::Blog => html! {
+        Route::Blog { title } => html! {
+            <>
+            <Navbar name = {"Blog"} />
+            <Blog blog_title = {title}/>
+            </>
+        },
+        Route::BlogTOC => html! {
             <>
             <Navbar name = {"Blog"} />
             <Blog/> 
@@ -36,7 +45,7 @@ fn switch(routes : Route) -> Html {
         Route::About => html! {
             <>
             <Navbar name = {"About"} />
-            <h1> {"About"} </h1> 
+            <About/>
             </>
         },
         Route::NotFound => html! { <h1> { "404:Error" } </h1> },

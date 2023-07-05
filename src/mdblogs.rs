@@ -1,12 +1,14 @@
+use phf::phf_map;
+
 pub struct MarkdownBlog<'b> {
-    pub title: &'b str,
-    pub date_created: &'b str,
-    pub post: &'b str,
+pub title: &'b str,
+pub date_created: &'b str,
+pub post: &'b str,
 }
 
-pub const BLOGS: &[MarkdownBlog] = &[
+pub static BLOGS: phf::Map<&'static str, MarkdownBlog<'_>> = phf_map! {
     
-    MarkdownBlog {
+    "R Programming Language Data Analysis Tutorial" => MarkdownBlog {
         title: "R Programming Language Data Analysis Tutorial",
         date_created: "2023-05-08",
         post: r#####"<p>This is my tutorial for R data analysis. It was one of my first analysis project done with R.</p>
@@ -732,4 +734,4 @@ wordcloud(word = hotDis2020$Disaster_Type, freq = hotDis2020$count, color=&quot;
 <hr />
 <p><strong><em><code>“Everyone has a plan until they get punched in the mouth.”</code></em></strong></p>"#####,
     },
-        ];
+        };

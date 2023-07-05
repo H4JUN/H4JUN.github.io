@@ -23,14 +23,17 @@ fn convert_to_html(path_to_markdown: &str) -> String {
 fn main() {
     let mut output = File::create("./src/mdblogs.rs").unwrap();
     let output_str =
-    "pub struct MarkdownBlog<'b> {
-    pub title: &'b str,
-    pub date_created: &'b str,
-    pub post: &'b str,
+    "use phf::phf_map;
+
+pub struct MarkdownBlog<'b> {
+pub title: &'b str,
+pub date_created: &'b str,
+pub post: &'b str,
 }
 
-pub const BLOGS: &[MarkdownBlog] = &[
+pub static BLOGS: phf::Map<&'static str, MarkdownBlog<'_>> = phf_map! {
     ".to_string();
+// pub const BLOGS: &[MarkdownBlog] = &[
     output.write_all(output_str.as_bytes()).unwrap();
     println!("{}", output_str);
     let dir_entry = read_dir("./markdown_blogs").expect("Could not read directory...");
@@ -48,7 +51,7 @@ pub const BLOGS: &[MarkdownBlog] = &[
         let html_string = convert_to_html(&file_path);
         let output_str = format!(
         "
-    MarkdownBlog {{
+    \"{title}\" => MarkdownBlog {{
         title: \"{title}\",
         date_created: \"{date_created}\",
         post: r#####\"{post}\"#####,
@@ -58,6 +61,6 @@ pub const BLOGS: &[MarkdownBlog] = &[
         println!("{}",output_str);
         output.write_all(output_str.as_bytes()).unwrap();
     }
-    let output_str = "];".to_string();
+    let output_str = "};".to_string();
     output.write_all(output_str.as_bytes()).unwrap();
 }
